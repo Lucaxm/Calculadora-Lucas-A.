@@ -1,0 +1,201 @@
+*,*::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #666666, #000000);
+  }
+  
+  .calculadora {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh; 
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(150px, auto) repeat(5, 100px);
+  }
+  
+  .calculadora > button {
+    cursor: pointer;
+/*  font-size: 2rem;
+    border: 1px solid white;     
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);*/
+  }
+  
+  .calculadora > button:hover {
+    opacity: 80%;
+  }
+  
+  .duas-camadas {
+    grid-column: span 2;
+    border-radius: 0 0 15px 0;
+  }
+
+  .border {
+    border-radius: 0 0 0 15px;
+  }
+  
+  .painel {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .painel .operador-anterior {
+    color: rgba(255, 255, 255, .75);
+    font-size: 2rem;
+  }
+  
+  .painel .operador-atual {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .botao-teclado-laranja {
+    position: relative;
+    display: inline-block;
+    width: 99px;
+    height: 99px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #975408, #be6900);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .botao-teclado-laranja::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #cf7f08, #ca7c06);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  }
+
+  .botao-teclado-laranja-i {
+    position: relative;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .botao-teclado-numero {
+    position: relative;
+    display: inline-block;
+    width: 99px;
+    height: 99px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #282828, #202020);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .botao-teclado-numero::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #232323, #4a4a4a);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  }
+
+  .botao-teclado-numero-i {
+    position: relative;
+    color: #fff;
+    font-size: 2.2rem;
+  }
+
+  .botao-teclado-cinza, #botao-teclado-cinza {
+    position: relative;
+    display: inline-block;
+    width: 99px;
+    height: 99px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #666666, #7e7e7e);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .botao-teclado-cinza::before, #botao-teclado-cinza::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #969696, #afafaf);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  }
+
+  .botao-teclado-cinza-i, #botao-teclado-cinza-i {
+    position: relative;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  #botao-teclado-igual {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #666666, #7e7e7e);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;    
+  }
+
+  #botao-teclado-igual::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #969696, #afafaf);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  }
+
+  #botao-teclado-igual-i {
+    position: relative;
+    color: #fff;
+    font-size: 2rem;    
+  }
+  

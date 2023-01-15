@@ -1,0 +1,26 @@
+.container-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+background-image: radial-gradient( circle 691px at 23.3% 17.5%,  rgba(241,122,59,0.91) 0%, rgba(249,224,196,1) 72.3% );
+}
+
+.container-footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.container-footer li {
+    list-style-type: none;
+}
+
+.lucas-footer {
+    margin: auto 5px;
+}
+
+.linkedin_icon, .github_icon {  
+    width: 45px;
+    height: 45px;
+    margin: auto 5px;
+}
